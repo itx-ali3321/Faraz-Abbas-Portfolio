@@ -848,7 +848,9 @@
                 <div class="fade-in-right">
                     <div class="contact-form-card">
                         <h3>Send a Message</h3>
-                        <form id="contactForm">
+                        <form action="https://formsubmit.co/farazabbas896@gmail.com" method="POST">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="name">Your Name</label>
@@ -1015,8 +1017,6 @@
         });
         const contactForm = document.getElementById('contactForm');
         const formSuccess = document.getElementById('formSuccess');
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             submitBtn.innerHTML = '<div style="width: 20px; height: 20px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 1s linear infinite; margin-right: 8px;"></div> Sending...';
             submitBtn.disabled = true;
